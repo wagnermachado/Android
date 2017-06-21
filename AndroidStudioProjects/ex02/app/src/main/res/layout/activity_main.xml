@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.alunos.ex02.MainActivity">
+
+    <Button
+        android:id="@+id/btnEmpilhar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="63dp"
+        android:onClick="empilhar"
+        android:text="Empilhar"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/btnDesempilhar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="desempilhar"
+        android:text="Desempilhar"
+        android:layout_alignTop="@+id/btnEmpilhar"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/btnMais"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btnEmpilhar"
+        android:layout_below="@+id/btnEmpilhar"
+        android:layout_marginTop="54dp"
+        android:onClick="somar"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/btnMenos"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnDesempilhar"
+        android:layout_alignTop="@+id/btnMais"
+        android:onClick="subtrair"
+        android:text="-" />
+
+    <Button
+        android:id="@+id/btnVezes"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnMais"
+        android:layout_below="@+id/btnMais"
+        android:layout_marginTop="48dp"
+        android:onClick="multiplicar"
+        android:text="*" />
+
+    <Button
+        android:id="@+id/btnDivide"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnMenos"
+        android:layout_alignTop="@+id/btnVezes"
+        android:onClick="dividir"
+        android:text="/" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stack:"
+        android:id="@+id/txtStack"
+        android:layout_below="@+id/btnVezes"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="57dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@color/abc_background_cache_hint_selector_material_dark" />
+
+    <TextView
+        android:id="@+id/txtNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Número:"
+        android:textColor="@color/abc_background_cache_hint_selector_material_dark"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edtNum"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/txtNum"
+        android:layout_alignEnd="@+id/btnDesempilhar"
+        android:layout_alignParentBottom="false"
+        android:layout_alignStart="@+id/btnMais"
+        android:layout_marginBottom="-10dp" />
+
+    <TextView
+        android:id="@+id/showStack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/txtStack"
+        android:layout_toEndOf="@+id/txtNum"
+        android:onClick="boxStack" />
+
+    <Button
+        android:id="@+id/btnLimpar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnDesempilhar"
+        android:layout_centerHorizontal="true"
+        android:onClick="limpar"
+        android:text="Limpar" />
+
+</RelativeLayout>
